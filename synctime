@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+claudia_version=$(cat "$(pwd)/.claudia-version" | tr -d "\r")
+
+docker run --rm --privileged "danlynn/claudia:$claudia_version" date -u $(date -u +%m%d%H%M%Y)

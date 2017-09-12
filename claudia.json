@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "skypebot-executor",
+    "name": "skypebot",
+    "region": "ap-southeast-1"
+  },
+  "api": {
+    "id": "u9o98ndhz1",
+    "module": "bot"
+  }
+}
