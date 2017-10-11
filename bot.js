@@ -104,16 +104,18 @@ function replyMessages(response) {
 		              else{
 		                type = "~ Full Day Leave";
 		              }
+		              console.log("Message Length is :", messages.length);
 		              if (text.toLowerCase().contains(today)){
 		              	leaveUsers.push("-"+author+" "+ type); 
 		              	leaveDescr += sprintf("\'%s\' said %s<br/> because of that %s. <br/>", text , author , leaveCase.replace(/because of |because |coz of |coz /gi, ""));
+		              	console.log("leaveUsers:", leaveUsers);
 		              }
 		          	});
 		    }
 		  
 		}
-		if (messages.length > 1) {   
-		  		if (leaveUsers.length>1) {
+		if (messages.length > 0) {   
+		  		if (leaveUsers.length > 1) {
 		  			header = 'There\'re ' + leaveUsers.length + ' members who take leave in the HiveloCity. (bandit)<br/>';
 		  		} else {
 		  			header = 'There\'s ' + leaveUsers.length + ' member who takes leave in the HiveloCity. (bandit)<br/>';
